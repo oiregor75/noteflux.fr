@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note Flux.FR</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .contador {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ff4757;
+        }
+    </style>
+</head>
+<body>
+    <img src="noteflux.fr.png" alt="NoteFlux.FR: Em breve uma Nova Ferramenta de gestão da sua empresa!!!" width="500">
+    <h1>NoteFlux.FR<br>Em breve uma Nova Ferramenta de gestão da sua empresa!!!</h1>
+	<br><br>
+    <p>Aguarde um momento. Você será levado para a página do desenvolvedor... <span id="tempo" class="contador">12</span> segundos.</p>
+    <script>
+        // Defina o tempo inicial (122 segundos)
+        let segundos = 12;
+        // Defina a URL de destino aqui
+        const urlDestino = "http://www.rogeriodossantosferreira.com.br"; 
+        const elementoContador = document.getElementById('tempo');
+        const intervalo = setInterval(() => {
+            segundos--;
+            elementoContador.textContent = segundos;
+            if (segundos <= 0) {
+                clearInterval(intervalo);
+                window.location.href = urlDestino;
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
